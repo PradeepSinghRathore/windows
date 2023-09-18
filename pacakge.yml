@@ -1,0 +1,9 @@
+---
+- name: install the package
+  hosts:  windows2
+  become: false
+  tasks:
+    - name: install the package
+      win_chocolatey:
+              name: putty
+              state: present

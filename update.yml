@@ -1,0 +1,15 @@
+---
+- name: install the package
+  hosts: windows2
+  become: false
+  tasks:
+    - name: update the system
+      win_updates:
+        category_names:
+         - SecurityUpdates
+         - CriticalUpdates
+         - UpdateRollups
+        state: searched
+        log_path: C:\ansible_wu.txt
+         
+

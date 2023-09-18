@@ -1,0 +1,11 @@
+---
+- name: on the firewall
+  hosts: windows
+  become: false
+  tasks:
+    - name: enabled the firewall
+      win_firewall:
+            state: disabled
+            profiles:
+                 - Private
+      tags: enable_firewall

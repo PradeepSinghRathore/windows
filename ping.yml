@@ -1,0 +1,8 @@
+---
+- name: ping
+  hosts: windows2
+  become: false
+  tasks:
+    - name: ping pong
+      win_ping:
+

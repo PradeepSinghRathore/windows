@@ -1,0 +1,11 @@
+---
+- name: update from wsus
+  hosts: windows2
+  become: false
+  tasks:
+    - name: update windows using wsus 
+      win_updates: 
+       category_names:
+         - SecurityUpdates
+       state: installed
+       server_selection: default

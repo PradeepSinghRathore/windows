@@ -1,0 +1,9 @@
+---
+- name: create a file
+  hosts: windows
+  become: winrm
+  tasks:
+    - name: file creation
+      win_file:
+          path: C:\Users\Administrator\Desktop\testdirectory
+          state: directory

@@ -1,0 +1,10 @@
+---
+- name: Display message after the login
+  hosts: windows
+  become: false
+  tasks:
+    - name: Display the message after login to the user
+      win_msg:
+           msg: WELCOME TO THE HITACHI SYSTEMS INDIA
+           display_seconds: 30
+           to: Administrator

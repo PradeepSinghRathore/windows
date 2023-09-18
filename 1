@@ -1,0 +1,12 @@
+---
+- name: update from wsus
+  hosts: localhost
+  tasks:
+    - name: 
+      win_updates:
+        category_names:
+          - SecurityUpdates
+
+        state: installed
+        reboot: no
+        server_selection: WSUSserver.wsus.com

@@ -1,0 +1,12 @@
+---
+- name: create a user
+  hosts: windows
+  become: false
+  vars:
+   - name: username
+  tasks:
+    - name: create a user
+      win_user:
+         name: "{{ name }}"
+         password: Sumit@2002
+         state: present
